@@ -77,7 +77,7 @@ function init() {
                         if (id == 0) {
                             $('.learn__container-slickBox').css('min-height', '550px');
                         } else {
-                            $('.learn__container-slickBox').css('min-height', '500px');
+                            $('.learn__container-slickBox').css('min-height', '520px');
                         }
                     }
                 } else {
