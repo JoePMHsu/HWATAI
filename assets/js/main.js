@@ -46,7 +46,7 @@ function onScrollStatus() {
 
     if (getScrollTop > 500) {
         gsap.to('.btnTop', { duration: 0.3, autoAlpha: 1, ease: "power2.inOut" });
-    }else{
+    } else {
         gsap.to('.btnTop', { duration: 0.3, autoAlpha: 0, ease: "power2.inOut" });
     }
 }
@@ -54,7 +54,8 @@ function onScrollStatus() {
 function init() {
 
     // LEARN
-
+    console.log('slick-track:', $('.slick-track').width());
+    console.log('slick-list:', $('.slick-list').width());
     for (var i = 0; i < 5; i++) {
         $('.learnNav_' + i).off('click').on('click', { id: i }, function (e) {
             var id = e.data.id;
@@ -63,10 +64,27 @@ function init() {
             for (var j = 0; j < 5; j++) {
                 if (id == j) {
                     // $('.slick_' + id).css('display', 'block');
-                    $('.slick_' + id).css('position', 'relative');
+                    $('.slick_' + id).css('z-index', '2');
+                    $('.slick_' + id).css('opacity', '1');
+                    $('.slick_' + id).css('pointer-events', 'auto');
+                    if (DW > 768) {
+                        if (id == 0) {
+                            $('.learn__container-slickBox').css('min-height', '600px');
+                        } else {
+                            $('.learn__container-slickBox').css('min-height', '550px');
+                        }
+                    } else {
+                        if (id == 0) {
+                            $('.learn__container-slickBox').css('min-height', '550px');
+                        } else {
+                            $('.learn__container-slickBox').css('min-height', '500px');
+                        }
+                    }
                 } else {
                     // $('.slick_' + j).css('display', 'none');
-                    $('.slick_' + j).css('position', 'absolute');
+                    $('.slick_' + j).css('z-index', '1');
+                    $('.slick_' + j).css('opacity', '0');
+                    $('.slick_' + j).css('pointer-events', 'none');
                 }
             }
         });
@@ -212,7 +230,7 @@ function setSlick() {
         centerMode: false,
         focusOnSelect: true,
         infinite: false,
-        adaptiveHeight: true,
+        adaptiveHeight: false,
         prevArrow: '<img class="sliderBtns sliderBtn_L" src="assets/images/arrow_L.svg">',
         nextArrow: '<img class="sliderBtns sliderBtn_R" src="assets/images/arrow_R.svg">',
         responsive: [{
