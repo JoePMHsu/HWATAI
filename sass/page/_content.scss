@@ -1,0 +1,47 @@
+@charset "UTF-8";
+
+:root {
+  font-size: 12px;
+
+  @media (min-width: 350px) {
+    font-size: 16px;
+  }
+
+  @media (min-width: 700px) {
+    font-size: 12px;
+  }
+
+  @media (min-width: 1024px) {
+    font-size: 16px;
+  }
+}
+
+html {
+  background-color: #fff;
+}
+
+.wrapper {
+  font-family: 'Noto Sans TC', sans-serif;
+  // font-family: 'Noto Serif TC', serif;
+  background-color: #fff;
+}
+
+main {
+  // overflow: hidden;
+  position: relative;
+}
+
+article {
+  position: relative;
+  width: 100%;
+  height: auto;
+  // overflow: auto;
+  // overflow-x: hidden;
+  // -webkit-overflow-scrolling: touch;
+}
+
+section {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
