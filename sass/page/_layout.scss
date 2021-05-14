@@ -116,9 +116,9 @@ header {
                         overflow: hidden;
                     }
 
-                    &:nth-child(1) p {
-                        color: #cf4b6f;
-                    }
+                    // &:nth-child(1) p {
+                    //     color: #cf4b6f;
+                    // }
                 }
             }
         }
@@ -201,11 +201,11 @@ footer {
                             overflow: hidden;
                         }
 
-                        &:nth-child(1) {
-                            p {
-                                color: #cf4b6f;
-                            }
-                        }
+                        // &:nth-child(1) {
+                        //     p {
+                        //         color: #cf4b6f;
+                        //     }
+                        // }
 
                         &:hover {
                             p {

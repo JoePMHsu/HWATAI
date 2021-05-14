@@ -52,6 +52,22 @@ function onScrollStatus() {
 }
 
 function init() {
+    //HOW
+
+    $('.how__way-link_0').off('click').on('click', function () {
+        var windowReference = window.open('https://dda.hwataibank.com.tw/');
+
+        myService.getUrl().then(function (url) {
+            windowReference.location = url;
+        });
+    });
+    $('.how__way-link_1').off('click').on('click', function () {
+        var windowReference = window.open('https://www.taiwanpay.com.tw/content/info/map.aspx');
+
+        myService.getUrl().then(function (url) {
+            windowReference.location = url;
+        });
+    });
 
     // LEARN
     console.log('slick-track:', $('.slick-track').width());
@@ -206,10 +222,19 @@ function setNavStatus(_id) {
     //     // switchPage(_id, nowPageId);
     // }
 
-    var pageArray = ['.kv', '.how', '.learn', '.QA', '.join'];
+    var pageArray = ['.how', '', '.learn', '.QA', '.join'];
 
-    gsap.to(window, { duration: 0.6, scrollTo: { y: pageArray[_id], offsetY: 50 } });
 
+    if (_id == 1) {
+        var windowReference = window.open('https://www.hncb.com.tw/wps/portal/HNCB/per_finance/area2/digital/TaiwanPay#%E6%9C%80%E6%96%B0%E5%84%AA%E6%83%A0');
+
+        myService.getUrl().then(function (url) {
+            windowReference.location = url;
+        });
+
+    } else {
+        gsap.to(window, { duration: 0.6, scrollTo: { y: pageArray[_id], offsetY: 50 } });
+    }
 }
 
 //----------------------------------------SLICK
