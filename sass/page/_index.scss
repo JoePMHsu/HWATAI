@@ -485,6 +485,7 @@
     }
 
     &__container {
+        transition: all 0.3s ease-in-out;
         position: relative;
         width: 95%;
         height: auto;
@@ -558,6 +559,7 @@
                     overflow: hidden;
 
                     &-Q {
+                        transition: all 0.3s ease-in-out;
                         position: relative;
                         width: calc(100% - 60px);
                         height: auto;
@@ -575,6 +577,7 @@
                         cursor: pointer;
 
                         .item-line {
+                            transition: all 0.3s ease-in-out;
                             position: absolute;
                             top: auto;
                             left: 15px;
@@ -584,6 +587,7 @@
                         }
 
                         p {
+                            transition: all 0.3s ease-in-out;
                             position: relative;
                             font-size: 18px;
                             color: #d04e71;

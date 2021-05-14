@@ -116,15 +116,32 @@ function init() {
 
         var $item = $(this).parent('.QA-cont-box-item');
         var activeLine = $item.find(".item-line");
+        var activeP = $item.find("p");
 
         if ($item.data('isOpen')) {
             $item.data('isOpen', false);
             $item.children(".QA-cont-box-item-A").slideUp();
-            gsap.to(activeLine, { duration: 0.3, rotation: 0, ease: "power2.inOut" })
+            $(this).css({
+                'background-color': '#eeeeee',
+                'color': '#303030'
+            });
+            activeP.css('color', '#d04e71');
+            activeLine.css({
+                'background-color': '#d04e71',
+                'transform': 'rotate(0deg)'
+            });
         } else {
             $item.data('isOpen', true);
             $item.children(".QA-cont-box-item-A").slideDown();
-            gsap.to(activeLine, { duration: 0.3, rotation: 90, ease: "power2.inOut" })
+            $(this).css({
+                'background-color': '#d04e71',
+                'color': '#fff'
+            });
+            activeP.css('color', '#fff');
+             activeLine.css({
+                'background-color': '#fff',
+                'transform': 'rotate(90deg)'
+            });
         }
     });
 
@@ -137,6 +154,15 @@ function init() {
             $('.QA-cont-box-item').data('isOpen', false);
             gsap.set(".item-line", { rotation: 0 });
 
+            $('.QA-cont-box-item-Q').css({
+                'background-color': '#eeeeee',
+                'color': '#303030'
+            });
+            $('.QA-cont-box-item-Q p').css('color', '#d04e71');
+            $('.item-line').css({
+                'background-color': '#d04e71',
+                'transform': 'rotate(0deg)'
+            });
 
             for (var y = 0; y < 5; y++) {
                 if (id == y) {
