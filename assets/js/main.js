@@ -62,7 +62,29 @@ function init() {
         });
     });
     $('.how__way-link_1').off('click').on('click', function () {
+        var windowReference = window.open('https://dda.hwataibank.com.tw/');
+
+        myService.getUrl().then(function (url) {
+            windowReference.location = url;
+        });
+    });
+    $('.how__way-link_2').off('click').on('click', function () {
         var windowReference = window.open('https://www.taiwanpay.com.tw/content/info/map.aspx');
+
+        myService.getUrl().then(function (url) {
+            windowReference.location = url;
+        });
+    });
+
+    $('.how__step-link_0').off('click').on('click', function () {
+        var windowReference = window.open('https://dda.hwataibank.com.tw/');
+
+        myService.getUrl().then(function (url) {
+            windowReference.location = url;
+        });
+    });
+    $('.how__step-link_1').off('click').on('click', function () {
+        var windowReference = window.open('https://dda.hwataibank.com.tw/');
 
         myService.getUrl().then(function (url) {
             windowReference.location = url;
@@ -138,7 +160,7 @@ function init() {
                 'color': '#fff'
             });
             activeP.css('color', '#fff');
-             activeLine.css({
+            activeLine.css({
                 'background-color': '#fff',
                 'transform': 'rotate(90deg)'
             });
