@@ -274,11 +274,11 @@ function setNavStatus(_id) {
 
 
     if (_id == 1) {
-        var windowReference = window.open('https://www.hncb.com.tw/wps/portal/HNCB/per_finance/area2/digital/TaiwanPay#%E6%9C%80%E6%96%B0%E5%84%AA%E6%83%A0');
+        // var windowReference = window.open('https://www.hncb.com.tw/wps/portal/HNCB/per_finance/area2/digital/TaiwanPay#%E6%9C%80%E6%96%B0%E5%84%AA%E6%83%A0');
 
-        myService.getUrl().then(function (url) {
-            windowReference.location = url;
-        });
+        // myService.getUrl().then(function (url) {
+        //     windowReference.location = url;
+        // });
 
     } else {
         gsap.to(window, { duration: 0.6, scrollTo: { y: pageArray[_id], offsetY: 50 } });
