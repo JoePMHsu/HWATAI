@@ -105,19 +105,19 @@ function init() {
                     $('.slick_' + id).css('z-index', '2');
                     $('.slick_' + id).css('opacity', '1');
                     $('.slick_' + id).css('pointer-events', 'auto');
-                    if (DW > 768) {
-                        if (id == 0) {
-                            $('.learn__container-slickBox').css('min-height', '600px');
-                        } else {
-                            $('.learn__container-slickBox').css('min-height', '550px');
-                        }
-                    } else {
-                        if (id == 0) {
-                            $('.learn__container-slickBox').css('min-height', '550px');
-                        } else {
-                            $('.learn__container-slickBox').css('min-height', '520px');
-                        }
-                    }
+                    // if (DW > 768) {
+                    //     if (id == 0) {
+                    //         $('.learn__container-slickBox').css('min-height', '600px');
+                    //     } else {
+                    //         $('.learn__container-slickBox').css('min-height', '550px');
+                    //     }
+                    // } else {
+                    //     if (id == 0) {
+                    //         $('.learn__container-slickBox').css('min-height', '550px');
+                    //     } else {
+                    //         $('.learn__container-slickBox').css('min-height', '520px');
+                    //     }
+                    // }
                 } else {
                     // $('.slick_' + j).css('display', 'none');
                     $('.slick_' + j).css('z-index', '1');
@@ -257,9 +257,12 @@ function setNavStatus(_id) {
     console.log(_id);
     for (var i = 0; i < 5; i++) {
         if (_id == i) {
-            $('.btnNav' + _id + ' p').css('color', '#cf4b6f');
+            // $('.btnNav' + _id + ' p').css('color', '#cf4b6f');
+            $('.btnNav' + _id + ' p').css('color', '#bb0f55');
+            $('.btnNav' + _id).css('background-color', '#f4dfe5');
         } else {
             $('.btnNav' + i + ' p').css('color', '#000');
+            $('.btnNav' + i).css('background-color', 'transparent');
         }
     }
     setMobileNavClose();

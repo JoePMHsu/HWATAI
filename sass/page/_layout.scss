@@ -120,6 +120,7 @@ header {
                     // &:nth-child(1) p {
                     //     color: #cf4b6f;
                     // }
+               
                 }
             }
         }
@@ -182,6 +183,7 @@ footer {
                     padding: 0 50px 0 0;
 
                     li {
+                        transition: all 0.3s ease;
                         position: relative;
                         width: auto;
                         height: 65px;
@@ -190,6 +192,7 @@ footer {
                         align-items: center;
                         cursor: pointer;
                         padding: 0 20px;
+                        background-color: transparent;
 
                         p {
                             transition: all 0.3s ease;
@@ -210,6 +213,8 @@ footer {
                         // }
 
                         &:hover {
+                            background-color: #f4dfe5;
+
                             p {
                                 color: #cf4b6f;
                             }
