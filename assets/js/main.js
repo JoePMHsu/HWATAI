@@ -283,6 +283,13 @@ function setNavStatus(_id) {
         //     windowReference.location = url;
         // });
 
+    }else if(_id==4){
+        
+         var windowReference = window.open('https://netbank.hwataibank.com.tw/NConsumerBank');
+
+        myService.getUrl().then(function (url) {
+            windowReference.location = url;
+        });
     } else {
         gsap.to(window, { duration: 0.6, scrollTo: { y: pageArray[_id], offsetY: 50 } });
     }
