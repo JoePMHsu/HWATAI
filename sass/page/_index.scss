@@ -666,11 +666,12 @@
                         line-height: 1.71;
                         letter-spacing: 1.4px;
                         text-align: justify;
-                        word-break: break-all;
+                        word-break: break-word;
                         color: #303030;
 
                         a {
                             color: #bb0f55;
+                            word-break: break-all;
                         }
 
                         img {
