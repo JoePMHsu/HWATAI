@@ -167,7 +167,8 @@ function init() {
         }
     });
 
-    for (var x = 0; x < 5; x++) {
+    var QAtotal = 3;
+    for (var x = 0; x < QAtotal; x++) {
         $('.qaNav_' + x).off('click').on('click', { id: x }, function (e) {
             var id = e.data.id;
             console.log('QA_ID:', id);
@@ -186,7 +187,7 @@ function init() {
                 'transform': 'rotate(0deg)'
             });
 
-            for (var y = 0; y < 5; y++) {
+            for (var y = 0; y < QAtotal; y++) {
                 if (id == y) {
                     $('.qaNav_' + id).css({
                         'color': '#fff',
@@ -283,9 +284,9 @@ function setNavStatus(_id) {
         //     windowReference.location = url;
         // });
 
-    }else if(_id==4){
-        
-         var windowReference = window.open('https://netbank.hwataibank.com.tw/NConsumerBank');
+    } else if (_id == 4) {
+
+        var windowReference = window.open('https://netbank.hwataibank.com.tw/NConsumerBank');
 
         myService.getUrl().then(function (url) {
             windowReference.location = url;

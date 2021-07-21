@@ -589,6 +589,10 @@
                 color: #fff;
                 background-color: #d04e71;
             }
+
+            .qaNav_2{
+                width: 100%;
+            }
         }
 
         &-content {
@@ -661,7 +665,8 @@
                         font-style: normal;
                         line-height: 1.71;
                         letter-spacing: 1.4px;
-                        text-align: left;
+                        text-align: justify;
+                        word-break: break-all;
                         color: #303030;
 
                         a {
